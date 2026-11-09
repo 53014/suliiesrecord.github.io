@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% else %}
+  <li class="empty">아직 쓴 글이 없어요.</li>
+  {% endfor %}
+</ul>

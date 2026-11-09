@@ -1,0 +1,18 @@
+title: 눈물 일지
+description: 눈물로 남기는 나의 기록
+lang: ko
+timezone: Asia/Seoul
+
+# 저장소 이름을 atearofsullie.github.io 로 바꿨다면 아래 두 줄은 그대로 두세요.
+url: "https://atearofsullie.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
