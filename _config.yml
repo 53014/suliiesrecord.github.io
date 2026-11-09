@@ -4,8 +4,8 @@ lang: ko
 timezone: Asia/Seoul
 
 # 저장소 이름을 atearofsullie.github.io 로 바꿨다면 아래 두 줄은 그대로 두세요.
-url: "https://atearofsullie.github.io"
-baseurl: ""
+url: "https://53014.github.io"
+baseurl: "/sulliesrecord.github.io"
 
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
