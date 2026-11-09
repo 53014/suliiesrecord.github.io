@@ -1,0 +1,103 @@
+assets/css/style.css
+:root {
+  --deep: #051021;          /* 가장 깊은 바다 (아래쪽) */
+  --mid: #0b2342;
+  --shallow: #1c4466;       /* 수면에 가까운 색 (위쪽) */
+  --text: #d9e6f2;
+  --muted: #8fa6bd;
+  --accent: #7fc4e8;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  min-height: 100%;
+  /* 위쪽은 연하게, 아래쪽은 #051021로 진하게 */
+  background: linear-gradient(to bottom, var(--shallow) 0%, var(--mid) 45%, var(--deep) 100%);
+  background-attachment: fixed;
+  background-color: var(--deep);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.site-header {
+  text-align: center;
+  padding: 72px 20px 32px;
+}
+.site-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.site-title:hover { text-decoration: none; }
+.site-desc {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.container {
+  flex: 1;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 16px 20px 64px;
+}
+
+.post-list { list-style: none; margin: 0; padding: 0; }
+.post-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+}
+.post-list time {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.post-list a { color: var(--text); font-size: 1.1rem; }
+.post-list a:hover { color: #fff; }
+.post-list .empty { color: var(--muted); display: block; text-align: center; }
+
+.post-header h1 { margin: 0 0 4px; font-size: 1.8rem; color: #fff; line-height: 1.4; }
+.post-header time { color: var(--muted); font-size: 0.9rem; }
+.post-content { margin-top: 32px; }
+.post-content blockquote {
+  margin: 1.5em 0;
+  padding: 4px 16px;
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+}
+.post-content img { max-width: 100%; border-radius: 8px; }
+.post-content code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.back { margin-top: 56px; }
+
+.site-footer {
+  text-align: center;
+  padding: 24px 20px 32px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 520px) {
+  .site-header { padding-top: 48px; }
+  .post-list li { flex-direction: column; gap: 2px; }
+}
