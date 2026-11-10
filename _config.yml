@@ -1,9 +1,9 @@
-title: 눈물 일지
-description: 눈물로 남기는 나의 기록
+title: "눈물 일지"
+description: "눈물로 남기는 나의 기록"
 lang: ko
 timezone: Asia/Seoul
 
-# 저장소 이름을 atearofsullie.github.io 로 바꿨다면 아래 두 줄은 그대로 두세요.
+# GitHub Pages 프로젝트 사이트 주소에 맞춘 설정
 url: "https://53014.github.io"
 baseurl: "/sulliesrecord.github.io"
 

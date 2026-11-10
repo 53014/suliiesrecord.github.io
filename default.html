@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="{{ site.lang | default: 'ko' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title and page.url != "/" %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <title>{% if page.title and page.title != "기록" %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
+  <meta name="theme-color" content="#07182b">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
+  <div class="ocean-glow" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <p class="site-desc">{{ site.description }}</p>
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark" aria-hidden="true">∿</span>
+      <span>{{ site.title }}</span>
+    </a>
+    <p class="site-description">{{ site.description }}</p>
   </header>
 
   <main class="container">
@@ -18,7 +23,8 @@
   </main>
 
   <footer class="site-footer">
-    <p>© {{ site.time | date: "%Y" }} {{ site.title }}</p>
+    <span>© {{ site.time | date: "%Y" }} {{ site.title }}</span>
+    <span class="footer-note">made of words and quiet moments</span>
   </footer>
 </body>
 </html>
